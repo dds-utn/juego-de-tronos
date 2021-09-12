@@ -11,6 +11,13 @@ public class Region {
   private Casa casaPrincipal;
   private Collection<Lugar> lugares;
 
+
+  public Region(String nombre, Casa casaPrincipal, Collection<Lugar> lugares) {
+    this.nombre = nombre;
+    this.casaPrincipal = casaPrincipal;
+    this.lugares = lugares;
+  }
+
   public Set<Lugar> castillos() {
     return lugares.stream().filter(Castillo.class::isInstance).collect(toSet());
   }

@@ -1,4 +1,4 @@
-package db;
+package got;
 
 import org.junit.jupiter.api.Test;
 
@@ -9,14 +9,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ContextTest extends AbstractPersistenceTest implements WithGlobalEntityManager {
 
-	@Test
-	public void contextUp() {
-		assertNotNull(entityManager());
-	}
-
-	@Test
-	public void contextUpWithTransaction() throws Exception {
-		withTransaction(() -> {});
-	}
-
+  @Test
+  public void contextUp() {
+    assertNotNull(entityManager());
+  }
 }
