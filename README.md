@@ -1,13 +1,25 @@
-# java-base-project
+# Juego de Tronos
 
-Esta es una plantilla de proyecto diseñada para: 
+Esta es una plantilla de proyecto diseñada para resolver el ejercicio de [Juego de Tronos](https://docs.google.com/document/d/1Qjgq_KS73UUn8337LEoXi_M28wtgi-EkBuaQ7N-9Ks4/edit):
 
-* Java 8. :warning: Si bien el proyecto no lo limita explícitamente, el comando `mvn verify` no funcionará con versiones mas modernas de Java. 
-* JUnit 5. :warning: La versión 5 de JUnit es la más nueva del framework y presenta algunas diferencias respecto a la versión "clásica" (JUnit 4). Para mayores detalles, ver: 
+* Java 8. :warning: Si bien el proyecto no lo limita explícitamente, el comando `mvn verify` no funcionará con versiones mas modernas de Java.
+* JUnit 5. :warning: La versión 5 de JUnit es la más nueva del framework y presenta algunas diferencias respecto a la versión "clásica" (JUnit 4). Para mayores detalles, ver:
   *  [Apunte de herramientas](https://docs.google.com/document/d/1VYBey56M0UU6C0689hAClAvF9ILE6E7nKIuOqrRJnWQ/edit#heading=h.dnwhvummp994)
-  *  [Entrada de Blog (en inglés)](https://www.baeldung.com/junit-5-migration) 
+  *  [Entrada de Blog (en inglés)](https://www.baeldung.com/junit-5-migration)
   *  [Entrada de Blog (en español)](https://www.paradigmadigital.com/dev/nos-espera-junit-5/)
 * Maven 3.3 o superior
+* JPA 2.1, Hibernate y HSQLDB. Para más información sobre la integración con JPA/Hiberante, ver [acá](https://docs.google.com/document/d/1dYvrVLRbFE9qwuKj5biz9oRBaRzj-K6ujIKOXNan02s/edit?ts=57e1f2b8#)
+
+
+# El enunciado
+
+Este ejercicio está basado en el punto 1 del parcial de [Juego de Tronos](https://docs.google.com/document/d/1Qjgq_KS73UUn8337LEoXi_M28wtgi-EkBuaQ7N-9Ks4/edit). Se trata de mapear las clases del modelo de domino utilizando JPA, de forma que puedan ser pesistidas en una base de datos relacional.
+
+# Consideraciones
+
+1. Acá encontrarás [una solución posible de alto nivel](https://docs.google.com/document/d/1BzxQmaeqVCkM68UvYwPcO8JwhsCuIZJXjrXAeEogjh8/edit#heading=h.tlw7c15gv98x) a este ejercicio. La misma te puede servir como punto de partida, pero tené en cuenta que a la hora de implementarla siempre pueden surgir problemas adicionales que no se desarrollen en ella.
+2. Para aprobar la entrega no solamente deberás agregar las anotaciones y configuraciones (en el archivo `persistence.xml`) sino también asegurarte de que puedas persistir y recueprar los objetos de la base de datos. Para ello te dejamos algunos tests que debés completar y también podés ampliar.
+3. Si querés genera un archivo `schema.sql` a partir del modelo de objetos, te va a convenir copiar el archivo `persistence.xml` a `src/main/resources/META-INF`. Luego podrás ejecutar la clase `org.uqbarproject.jpa.java8.extras.export.JpaSchemaExport` con los argumentos `db schema.sql true true`
 
 # Ejecutar tests
 
